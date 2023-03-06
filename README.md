@@ -91,7 +91,7 @@ If the code includes an API endpoint that returns an SVG image and/or other cont
 <svg onload=alert('XSS attack')>
 ```
 Query to exploit attribute value without quotes vulnerability:
-<img src=@imageUrlhttp://brutelogic.com.br/poc.svg>
+<img src=@imageUrl>
 ```
 <𝚒𝚖𝚐 𝚜𝚛𝚌=𝚡 𝚘𝚗𝚎𝚛𝚛𝚘𝚛=𝚙𝚛𝚒𝚗𝚝()>
 ```
